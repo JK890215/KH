@@ -9,6 +9,7 @@ import kr.or.ksmart.dto.Goods;
 import kr.or.ksmart.dto.Member;
 
 //회원관리위한 클래스
+//재능관리위한 클래스 
 public class Mdao {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -273,6 +274,28 @@ public class Mdao {
 		conn.close();
 	}
 	
+	//01_02 재능등록 메서드 선언
+	public void gInsert(Goods g) throws SQLException, ClassNotFoundException{
+		System.out.println("01_02 gInsert Mdao.java");
+		
+		DriverDB db = new DriverDB();
+		conn = db.driverDbcon();
+		
+		pstmt = conn.prepareStatement(
+				"INSERT INTO tb_goods VALUES (?, ?, ?, ?)");
+		pstmt.setString(1, g.getG_name());	
+		pstmt.setString(2, g.getG_cate());
+		pstmt.setString(3, g.getG_price());
+		pstmt.setString(4, g.getG_desc());
+		
+		System.out.println(pstmt + "<-- pstmt gInsert Mdao.java");
+		
+		pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
+	}
+	
+	
 	//01_02 회원등록 메서드 선언
 	public void mInsert(Member m) throws SQLException, ClassNotFoundException{
 		System.out.println("01_02 mInsert Mdao.java");
@@ -294,7 +317,26 @@ public class Mdao {
 	}
 	
 	//01_01 회원등록(드라이버로딩과 DB연결 후) 메서드 선언
+	public void gInsert(Goods g, Connection conn) throws SQLException{
+		//3단계 쿼리실행준비부터 시작
+		System.out.println("01_01 gInsert Mdao.java");
+		pstmt = conn.prepareStatement(
+				"INSERT INTO tb_goods VALUES (?, ?, ?, ?)");
+		pstmt.setString(1, g.getG_name());	
+		pstmt.setString(2, g.getG_cate());
+		pstmt.setString(3, g.getG_price());
+		pstmt.setString(4, g.getG_desc());
+		
+		System.out.println(pstmt + "<-- pstmt gInsert Mdao.java");
+		
+		pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
+		
+	}
 
+	
+	//01_01 회원등록(드라이버로딩과 DB연결 후) 메서드 선언
 	public void mInsert(Member m, Connection conn) throws SQLException{
 		//3단계 쿼리실행준비부터 시작
 		System.out.println("01_01 mInsert Mdao.java");
