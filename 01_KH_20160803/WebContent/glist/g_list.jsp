@@ -24,7 +24,7 @@ for(int i = 0; i<get_alg.size() ; i++){
 		<td><%= g.getG_desc()%></td>
 		
 	<td>
-<a href="<%= request.getContextPath() %>/gupdate/g_update_form.jsp?send_id=<%= g.getG_name()%>">수정클릭</a>			
+<a href="<%= request.getContextPath() %>/gupdate/g_update_form.jsp?send_id=<%= g.getG_code()%>">수정클릭</a>			
 		</td>
 		<td>
 <a href="<%= request.getContextPath() %>/gdelete/g_delete_pro.jsp?send_id=<%= g.getG_name()%>">삭제클릭</a>			

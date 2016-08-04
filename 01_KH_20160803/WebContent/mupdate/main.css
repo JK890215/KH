@@ -24,7 +24,7 @@ body {
  width: 922px;
 
 }
-#header {
+#header { /* »ó´Ü */
  color: #333;
  width: 900px;
  float: left;
@@ -32,35 +32,35 @@ body {
  border: 1px solid #ccc;
  height: 100px;
  margin: 10px 0px 5px 0px;
- background: #BDff8C;
+ background: #ffffff;
 }
-#leftcolumn { 
+#leftcolumn { /* Áß¾Ó ÁÂÃø */
  color: #333;
  border: 1px solid #ccc;
- background: #E7DBD5;
+ background: #ffffff;
  margin: 0px 0px 0px 0px;
  padding: 10px;
  height: 350px;
  width: 200px;
  float: left;
 }
-#rightcolumn { 
+#rightcolumn { /* Áß¾Ó ¿ìÃø */
  float: right;
  color: #333;
  border: 1px solid #ccc;
- background: #F2F2E6;
+ background: #ffffff;
  margin: 0px 0px 0px 0px;
  padding: 10px;
  height: 350px;
  width: 678px;
  display: inline;
 }
-#footer { 
+#footer { /* ÇÏ´Ü */ 
  width: 900px;
  clear: both;
  color: #333;
  border: 1px solid #ccc;
- background: #BD9C8C;
+ background: #ffffff;
  margin: 0px 0px 10px 0px;
  padding: 10px;
 }

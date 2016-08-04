@@ -205,7 +205,7 @@ public class Mdao {
 		System.out.println("04.1 gSelectforUpdate Mdao.java");
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
-		pstmt = conn.prepareStatement("select * from tb_goods where g_name=?");
+		pstmt = conn.prepareStatement("select * from tb_goods where g_code=?");
 		pstmt.setString(1, gid);
 		rs = pstmt.executeQuery();	
 		if(rs.next()){
@@ -222,8 +222,6 @@ public class Mdao {
 		return g;
 		
 	}
-	
-	
 	//04 한명회원정보조회 메서드 선언(수정화면 또는 상세보기 등)
 	public Member mSelectforUpdate(String mid) throws ClassNotFoundException, SQLException{
 		System.out.println("04 mSelectforUpdate Mdao.java");
@@ -279,13 +277,13 @@ public class Mdao {
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
 		pstmt = conn.prepareStatement(
-				"UPDATE tb_Goods SET G_cate=?,G_price=?,G_desc=? WHERE G_name=?");
+				"UPDATE tb_goods SET g_name=?,g_cate=?,g_price=?,g_desc=? WHERE g_code=?");
 		System.out.println(pstmt + "<-- pstmt 1");
 		
-		pstmt.setString(1, g.getG_cate());
-		pstmt.setString(2, g.getG_price());
-		pstmt.setString(3, g.getG_desc());
-		pstmt.setString(4, g.getG_name());
+		pstmt.setString(1, g.getG_name());
+		pstmt.setString(2, g.getG_cate());
+		pstmt.setString(3, g.getG_price());
+		pstmt.setString(4, g.getG_desc());
 		pstmt.setString(5, g.getG_code());
 		
 		System.out.println(pstmt + "<-- pstmt 2");

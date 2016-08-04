@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@ page import = "kr.or.ksmart.dao.Mdao" %>
 <%@ page import = "kr.or.ksmart.dto.Goods" %>
 
@@ -31,16 +31,16 @@ th, td {
 
 <%
 String send_id = request.getParameter("send_id");
-System.out.println(send_id + "<-- send_id m_update_form.jsp");
+System.out.println(send_id + "<-- send_id g_update_form.jsp");
 Mdao dao = new Mdao();
 Goods g = dao.gSelectforUpdate(send_id);
 
-//String dbid = null;
+String dbid = null;
 String dbpw = null;
 String dblevel = null;
 String dbname = null;
 String dbemail = null;
-//dbid = g.getG_code();
+dbid = g.getG_code();
 dbpw = g.getG_name();
 dblevel = g.getG_cate();
 dbname = g.getG_price();
@@ -49,18 +49,17 @@ dbemail = g.getG_desc();
 %>
 <form action="<%= request.getContextPath() %>/gupdate/g_update_pro.jsp" method="post">
 <table border="1">
-<%-- <tr>
-	<td>아이디</td>
+
+<tr>
+	<td>재능코드</td>
+
 	<td>
-<input type="hidden" name="m_id" size="20" value="<%= dbid %>">	
+<%-- <input type="hidden" name="g_code" size="20" value="<%= dbid %>">	
 		<%= dbid %>
-		
-
-<input type="text" name="m_id" size="20" value="<%= dbid %>" readonly> 
-
-	
+ --%>
+<input type="text" name="g_code" size="20" value="<%= dbid %>" readonly> 
 	</td>
-<tr> --%> 
+<tr> 
 <tr>
 	<td>재능명</td>
 	<td><input type="text" name="g_name" size="20" value="<%= dbpw %>"></td>
@@ -78,12 +77,10 @@ dbemail = g.getG_desc();
 	<td><input type="text" name="g_desc" size="20" value="<%= dbemail %>"></td>
 <tr>
 <tr>
-	<td colspan="4"><input type="submit" value="회원수정버튼"></td>
+	<td colspan="4"><input type="submit" value="재능수정버튼"></td>
 </tr>
 </table>
 </form>
-
-
 
 <%@ include file="/module/hadan.jsp" %>
 
