@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.crebugs.com	TRUE	/	FALSE	1999999999	PHPSESSID	185dbf63c0becc7ce2f7936c9f78e021
+

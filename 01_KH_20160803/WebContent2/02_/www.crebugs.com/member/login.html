@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.crebugs.com/member/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Aug 2016 07:16:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>크레벅스::재능마켓</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/s_edit.css">
+	<script src="../dist/semantic.js"></script>
+	<link rel="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css">
+
+
+	<script type="text/javascript" src="../js/global.js"></script>
+	<script type="text/javascript" src="../js/member.js"></script>
+	<script type="text/javascript" src="../js/shop.js"></script>
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="../js/placeholders.min.js"></script>
+	<script type="text/javascript" src="../../wcs.naver.net/wcslog.js"></script><script type="text/javascript">if(!wcs_add) var wcs_add = {};wcs_add["wa"] = "1475a56d7b8754c";wcs_do();</script>
+
+	<!--<script type="text/javascript" src="[JS library]"></script>-->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  <script type="text/javascript" src="js/selectivizr.js"></script>
+	  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+	<![endif]-->
+	<script src="../../ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+	<script type="text/javascript">
+	  WebFont.load({
+
+	    // For google fonts
+	    google: {
+	      families: ['Droid Sans', 'Droid Serif']
+	    },
+	    // For early access or custom font
+	    custom: {
+	        families: ['Nanum Gothic'],
+	        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+	    }
+
+	  });
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-66362455-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','../../connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '861656550550675');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=861656550550675&amp;ev=PageView&amp;noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+	<section class="bg_image" style="height: auto; min-width:1000px; position: relative; background-color: rgba(0,0,0,0.3)">
+		<div id="bg" style="background:url('../images/layout/home.jpg') center center;background-size: cover; position: absolute; left:0; right:0; bottom:0; top:0; z-index: -1"></div>
+		<div class="upper">
+			<!-- 상단바 영역 -->
+			<nav class="top_nav container">
+				<a href="javascript:index();">
+					<h1 class="logo float left">
+						<img src="../images/layout/logo_crebugs.png" style="padding-top: 18px" alt="크레벅스 로고" width="170">
+					</h1>
+				</a>
+				<div class="right_bottom float right">
+					<div class="float left">
+						<form method="get" action="http://www.crebugs.com/product/list.php">
+							<input type="hidden" name="otype" value="" />
+							<input type="hidden" name="code" value="" />
+							<input type="hidden" name="mkeytype" id="mkeytype" value="p" />
+							<input type="text" name="keyword" placeholder="재능 검색">
+							<div class="bar"></div>
+							<button class="float left search_btn"><i class="search icon"></i></button>
+						</form>
+					</div>
+					<div class="float right">
+						<ul class="icon_category">
+
+							<li class="profile_box" >
+																<a href="login.html" style="padding: 7px;">로그인</a>
+
+								<a href="join.html"  style="padding: 7px;">회원가입</a>
+															</li>
+							<li class="side_icon side_btn">
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+															</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</nav>
+			<div class="clear"></div>
+			<div class="category_bg">
+				<!-- 카테고리 영역 -->
+				<nav class="category container">
+					<ul class="list">
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=10">디자인</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1010">로고/CI/BI</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1011">명함/브로셔</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1012">인물/캐리커쳐</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1025">커미션</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1013">만화/웹툰</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1014">POP/현수막</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1015">일러스트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1016">웹디자인</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1017">이벤트/상세페이지</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1024">블로그/카페</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1018">폰트/캘리그라피</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1019">사진/포토샵</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1020">스케치</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1021">도면/3D도면</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1022">출판/e북</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1023">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=11">마케팅</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1119">SNS마케팅</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1111">바이럴마케팅</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1110">마케팅 기획</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1112">카페/블로그</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1113">검색/트래픽</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1114">배너광고</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1115">야외광고</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1116">이메일/DM발송</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1117">광고대행</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1118">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=12">문서</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1210">번역/통역</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1211">타이핑/문서작업</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1220">제안서</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1212">카피라이팅</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1213">창작/대본</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1214">기사/리뷰</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1215">교정/편집</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1216">서식/자료</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1217">프레젠테이션</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1218">보도자료</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1219">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=13">비지니스</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1310">창업/사업계획</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1311">노하우/팁</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1312">컨설팅/리서치</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1313">업무지원</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1314">금융/투자상담</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1315">법률상담</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1316">문서작성</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1317">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=14">컴퓨터</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1410">웹사이트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1413">모바일 사이트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1411">어플리케이션</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1412">응용프로그램</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1414">컴퓨터/서버</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1415">플래시/스크립트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1416">프로그램/매트랩</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1417">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=15">음악&amp;영상</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1510">영상제작/편집</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1511">녹음/편집</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1516">에니메이션 제작</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1512">작사/작곡/채보</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1513">나레이션/성우</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1514">자막제작</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1515">레슨/강좌</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1518">비트박스</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1517">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=16">생활서비스</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1610">개인강좌/학습</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1611">연애상담</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1612">건강/다이어트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1613">상담/대화</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1624">사주/운세</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1614">생활상식/노하우</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1615">미용/스타일링</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1616">역할/하객대행</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1617">여행</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1618">가사/베이비시터</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1619">수리/인력/공사</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1620">이벤트/홍보</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1621">심부름</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1623">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=17">핸드메이드</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1710">소품제작</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1711">의류/패션잡화</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1712">액세서리/쥬얼리</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1713">리폼</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1714">공예/미술</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1715">선물</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1716">카드/메세지</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1717">농산물/식료품</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1718">수집품</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1719">기타</a></li>
+															</ul>
+							</li>
+													<li>
+								<a  href="http://www.crebugs.com/product/list.php?code=18">게임</a>
+								<ul class="sub_nav">
+																<li><a href="http://www.crebugs.com/product/list.php?code=1810">LOL</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1820">오버워치</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1817">히어로즈오브스톰</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1811">서든어택</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1816">하스스톤</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1818">던전앤파이터</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1819">디아블로3</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1812">스타크래프트</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1813">RPG</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1814">모바일게임</a></li>
+																<li><a href="http://www.crebugs.com/product/list.php?code=1815">기타</a></li>
+															</ul>
+							</li>
+												<li class="btnCategory_request" style="float:right;"><span class="select"><i class="icon cloud"></i>카테고리 요청</span></li>
+					</ul>
+					<div class="clear"></div>
+				</nav>
+			</div>
+		</div> <!-- upper end -->
+			</section>
+
+<script type="text/javascript">
+	$(function(){
+
+	var bg_dir = 'http://www.crebugs.com/images/layout/';
+	var bg_item =[	'bg1.png',
+					'bg2.html'
+					];
+	var bg_cnt = Math.floor(Math.random() * bg_item.length);
+
+	$('#bg').css({'background-image': 'url('+bg_dir+bg_item[bg_cnt]+')'});
+	});
+</script>
+
+
+	<div id="side_mask"></div>
+	<nav class="side_nav">
+
+		<header class="top">
+			<ul id="noticeTick" style="height:60px;overflow:hidden">
+							<li style="height:40px;padding:10px 0px 10px 0px;"><a href="http://www.crebugs.com/customer/notice.php?b_id=001&amp;idx=124&amp;mode=view">[크레벅스 패밀리]4주차 패밀리의 열정은 끝이없다! 리얼후기 만나보기!</a></li>
+							<li style="height:40px;padding:10px 0px 10px 0px;"><a href="http://www.crebugs.com/customer/notice.php?b_id=001&amp;idx=122&amp;mode=view">[플러스 재능]여러분의 재능을 노출 하십시오!</a></li>
+						</ul>
+			
+			<script>
+				function tick() {
+					$('#noticeTick li:first').slideUp( function() { $(this).appendTo( $('#noticeTick') ).slideDown(); });
+				}
+				
+				$( function() {
+					setInterval( function() { tick(); }, 3000 );
+				});
+			</script>
+		</header>
+				<section class="profile_box">
+			<a href="login.html" style="color:#555;display:inline-block; margin: 20px 0; font-weight:bold; font-size: 13pt !important; line-height: 13pt !importnat;">
+				<i class="icon lock"></i>
+				로그인을 해주세요!
+			</a>
+		</section>
+				<section class="body">
+						<header>
+				<span class="title"><i class="icon alarm outline" ></i> 알림</span>
+			</header>
+			<section class="list alarm">
+
+								<a class="list_item" style="margin: 5px 0; text-align:center;">
+					새로운 알림이 없습니다.
+				</a>
+								<div class="clear"></div>
+			</section>
+			<div class="clear"></div>
+		</section>
+	</nav>
+
+
+<!-- 사이드 메뉴 관련 스크립트 -->
+<script type="text/javascript">
+
+	$(function(){
+		$('.side_nav section.list.msg > a.list_item:first').css('margin-top', '5px');
+		$('.side_nav section.list.msg > a.list_item:last').css('border-bottom', 'none');
+
+		$('.side_nav section.list.alarm > a.list_item:first').css('margin-top', '5px');
+		$('.side_nav section.list.alarm > a.list_item:last').css('border-bottom', 'none');
+
+
+		$('.msg .list_item').click(function(){
+			$(this).slideUp('fast');
+
+			$('.side_nav section.list.msg > a.list_item:first').css('margin-top', '5px');
+			$('.side_nav section.list.msg > a.list_item:last').css('border-bottom', 'none');
+		});
+
+		$('.list a, .sub_nav').mouseenter(function(){
+			$obj = $(this).parent().find('.sub_nav');
+			$obj.css('z-index', '100').stop().slideDown('fast');
+		});
+		$('.list a, .sub_nav').mouseleave(function(){
+			$obj = $(this).parent().find('.sub_nav');
+			$obj.css('z-index', '99').stop().slideUp('fast');
+		});
+	});
+</script>
+
+
+<script type="text/javascript">
+	$(function(){
+		var lefts = $('.main_content .container').offset().left;
+		function open_side() {
+			// $('#side_mask').fadeIn(200);
+			$('#side_mask').fadeTo(200,0.6);
+			$('.side_nav').css('right', -100).css('opacity', 0).show();
+			$('html').css('overflow', 'hidden');
+			// $("body").bind('touchmove', function(e){e.preventDefault()}); //스크롤방지
+			$('.side_nav').animate({right: '0px', opacity: 1}, 300);
+		}
+		function close_side() {
+			$('.side_nav').animate({right: '-500px', opacity: 0}, 200, function(){$(this).hide();});
+			$('#side_mask').fadeOut();
+			$('html').css('overflow', 'auto');
+			// $("body").unbind('touchmove'); //스크롤 방지 해제
+		}
+
+		$('.side_btn').click(function(){open_side();});
+		$('#side_mask, .exit.btn').click(function(){close_side();});
+
+		$('.top_nav.container .right_bottom .left input[name=keyword]').mouseenter(function(){$(this).focus();});
+	});
+</script>
+
+	<!-- 컨텐츠 영역 -->
+	<div class="main_content">
+		<!-- 컨텐츠 컨테이너 시작 -->
+		<section class="container">
+
+<div class="loginForm">
+	<!-- Logo -->
+	<div class="logo"></div>
+	<!-- Login Form -->
+	<form name="login_form" method="post" action="http://www.crebugs.com/member/member_pro.php">
+		<input type="hidden" name="mode" value="login">
+		<input type="hidden" name="types" value="2">
+		<button class="btn green float right" style="margin:0; width:70px; height: 80px; font-size: 17pt !important; line-height: 17pt !important; white-space: nowrap;">로그인</button>
+		<div class="input text float left">
+			<input type="text" name="email" placeholder="E-Mail" value="" autofocus>
+		</div>
+		<div class="input password float left">
+			<input type="password" name="passwd" placeholder="Password">
+		</div>
+		<div class="float left sub_menu" style="margin-top:15px; width:100%">
+			<span class="float left">
+			<input type="checkbox" class="css-checkbox" name="SaveID" id="cb" value="Y" />
+			<label for="cb" class="css-label">아이디 저장</label>
+			</span>
+			<span class="float right">
+				<a href="#" class="search_button">비밀번호 재발급</a>
+			</span>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</form>
+	<!-- Email -->
+	<div class="txt" id="searchtab" style="display:none; margin-top: 15px">
+		<form name="search_form" method="post">
+			<div class="input text small float left">
+				<input class="input" type="text" name="email" placeholder="찾을 아이디/이메일을 입력해 주세요." />
+			</div>
+			<button id="mailsend_button" class="myButton float right">임시 PW발송</button>
+			<div class="clear"></div>
+		</form>
+	</div>
+
+	<div class="spliter"></div>
+	<div class="joinForm">
+		<div class="float left">
+			<span class="q_join">크레벅스 회원이 아니세요?</span><br>
+			회원가입 하시고 무한한 재능의 세계로 들어오세요!
+		</div>
+		<a href="join.html" class="float right btnJoin">크레벅스 회원가입하기</a>
+		<div class="clear"></div>
+	</div>
+</div>
+<style type="text/css">
+.btnJoin {
+	padding: 5px;
+	margin: 0;
+	font-weight:bold;
+	display:inline-block;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:2px solid #afd135;
+	color: #7fa836;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
+	background:-moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
+	background-color:#b8e356;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+	padding:6px 0px;
+	margin: 0;
+	text-decoration:none;
+	text-shadow:0px 0px 3px rgba(0,0,0, 0.5);
+	width: 97px;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356));
+	background:-moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-webkit-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-o-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-ms-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356',GradientType=0);
+	background-color:#a5cc52;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+label {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+	  position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:20px;
+	height:15px; 
+	display:inline-block;
+	line-height:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -15px;
+}
+
+.css-label{
+	background-image:url('../images/layout/lite-green-check.png');
+	color: #666666;
+}
+</style>
+
+
+		</section>			<!-- 컨텐츠 컨테이너 종료 -->
+	</div>
+
+
+	<!-- 풋터 영역 -->
+	<footer class="work"></footer>
+
+	<footer class="main_footer">
+		<section class="container">
+			<div class="description float left">
+
+				<div>
+					
+				    <a href="http://www.crebugs.com/about/company.php">회사소개</a>
+				    
+					<a href="http://www.crebugs.com/about/privacy.php">개인정보취급방침</a>
+					<a href="http://www.crebugs.com/about/terms.php">이용약관</a>
+					<a href="javascript:customer01();">공지사항</a>
+					<a href="http://www.crebugs.com/about/guide.php">이용가이드</a>
+					<a href="http://www.crebugs.com/customer/faq.php?b_id=002">일반이용문의</a>
+				</div>
+				<div style="letter-spacing: -1px; margin-top: 10px; line-height:17px !important;">
+					<b>크레벅스 대표</b> 김범수 <span class="bar">|</span> <b>사업자등록번호</b> 114-16-34644 <span class="bar">|</span> <b>통신판매업신고</b> 2016-서울강남-02115<br>
+					<b>주소</b> 서울특별시 강남구 테헤란로 332, 2층(역삼동, 현정빌딩) <span class="bar">|</span> <b>TEL</b> 070-8777-0139 <span class="bar">|</span> <b>FAX</b> 02-6229-0139<br>
+					Copyright <i class="icon copyright"></i>CREBUGS. All right reserved.
+				</div>
+			</div>
+			<div class="right float customer" style="margin-top: 10px;">
+				<h4 style="font-weight: bold; font-size: 12pt !important; line-height: 14pt !important;"><img src="../images/layout/headphone.png" width="15">크레벅스 고객센터</h4>
+				<div style="margin: 4px 0;">주말 및 공휴일은 휴무입니다.</div>
+				<div class="office_num" style="color: #2ace24; font-size: 14pt !important; line-height: 15pt !important; font-weight: bold;">070-8777-0139</div>
+				<div>운영시간 <span style="color: #2ace24;">09:00~18:00</span></div>
+			</div>
+			<div class="clear"></div>
+		</section>
+	</footer>
+
+
+<nav class="top_btn">
+	<i class="icon arrow up"></i>
+</nav>
+
+
+<div id="mask"></div>
+<div class="layer_request">
+	<div class="request_tit"><img src="../images/layout/catogory_request_tit.png" alt="카테고리타이틀"></div><!--.request_tit-->
+	<div class="request_subtit">원하시는 카테고리가 없으시다면 크레벅스에게 말해주세요!<br><small style="font-size: 8pt !important; line-height: 20pt !important;">ex) [게임]붉은보석, [컴퓨터]아이폰 어플리케이션 등</small></div><!--.request_subtit-->
+	<div class="request_btn">
+    	<input type="text" name="content" maxlength="18" autocomplete="off">
+        <div class="btn green">전송하기</div>
+    </div><!--.request_btn-->
+    <div class="close layer">
+    	<i class="icon remove"></i>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+	$(function(){
+		$('.btnCategory_request').click(function(){
+	        //화면의 높이와 너비를 구한다.
+	        var maskHeight = $(document).height();
+	        var maskWidth = $(window).width();
+
+	        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+	        $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+	        //애니메이션 효과
+	        $('#mask').fadeIn(500);
+	        $('#mask').fadeTo(500,0.6);
+
+	        $('html').css('overflow', 'hidden');
+			$('.layer_request').fadeIn(1000);
+			$('.layer_request').find('input').focus();
+		});
+		//검은 막을 눌렀을 때
+		$('#mask').click(function () {
+		    $(this).fadeOut(500);
+		    $('.window').hide();
+			$('html').css('overflow', 'auto');
+
+			$('.layer_request').fadeOut(500);
+		});
+		$('.close.layer').click(function(){
+			$('#mask').click();
+		});
+		$('.request_btn .btn.green').click(function(){
+			var userno = '';
+			var content = $('.layer_request > .request_btn > [name=content]').val();
+			if (userno=='') {
+				alert("로그인을 해주세요.");
+				location.reload();
+				return false;
+			}
+			else if(content=='') {
+				alert("내용을 입력해 주세요.");
+				location.reload();
+				return false;
+			}
+			$.post("http://www.crebugs.com/product/process.php",{mode:"cate_request", userno: userno, content: content}, function(data) {
+				// console.log(data);
+				if(data!="Y"){
+					alert("카테고리 요청에 실패했습니다. 다시 시도해주세요.");
+					location.reload();
+					return false;
+				}
+				else {
+					alert("관리자에게 카테고리를 요청했습니다!\n적극적으로 수렴하겠습니다 ^-^");
+					location.reload();
+				}
+			});
+		});
+
+		$('.top_btn').click(function(){
+				$('html, body').animate({scrollTop:0}, '200', 'swing', function(){$(window).scroll();});
+		});
+			// 위치 재배열
+		$(window).scroll(function(){
+		    var tops = $(window).scrollTop();
+
+		    // console.log('tops: '+tops);
+		    // console.log('product_content: '+$('.main_content .product_content').width());
+
+		    // console.log('footerHeight: '+footerHeight);
+
+		    // var limitHeight = $(document).height() - $('.button-group').height() - 10 - tops;
+
+		    if(tops<$('.main_content').first().offset().top) { //95
+		    	// console.log('안 넘었다');
+		        // element.css({'top':'', 'position':''}).css('right', '').css('left', '');
+		        $('.top_btn').fadeOut('fast');
+
+		    }
+		    else {
+		    	// console.log('넘었다');
+	        	// element.css({'top':0, 'position':'fixed'}).css('left',($('.main_content .container').offset().left + $('.main_content .product_content.top').width() + 32));
+	        	$('.top_btn').fadeIn('fast').css('right', ($('.main_content > .container').offset().left - 40)+'px');
+		    }
+		});
+	});
+</script>
+
+
+<script src="../outdatedbrowser/outdatedbrowser.min.js"></script>
+
+<script type="text/javascript">
+//event listener: DOM ready
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            if (oldonload) {
+                oldonload();
+            }
+            func();
+        }
+    }
+}
+//call plugin function after DOM ready
+addLoadEvent(function(){
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: '../outdatedbrowser/lang/kr.html'
+    })
+});
+</script>
+
+
+<div id="outdated"></div>
+</body>
+
+<!-- Mirrored from www.crebugs.com/member/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Aug 2016 07:16:14 GMT -->
+</html>

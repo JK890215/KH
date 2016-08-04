@@ -1,0 +1,16 @@
+HTTrack3.48-22+htsswf+htsjava launched on Thu, 04 Aug 2016 16:15:30 at http://www.crebugs.com/member/join.php +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.crebugs.com/member/join.php -O1 "C:\Users\sm202\Desktop\02_\02_" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:15:31	Warning: 	Note: due to www.crebugs.com remote robots.txt rules, links beginning with these path will be forbidden: /profile/ (see in the options to disable this)
+16:16:13	Error: 	"Not Found" (404) at link www.crebugs.com/member/bg2.png (from www.crebugs.com/member/join.php)
+16:16:13	Warning: 	Retry after error -4 (No data (connection closed)) at link www.crebugs.com/images/layout/mypage_listbg04.png (from www.crebugs.com/css/style.css)
+16:16:13	Warning: 	Retry after error -4 (No data (connection closed)) at link www.crebugs.com/images/layout/mypage_listbg05.png (from www.crebugs.com/css/style.css)
+16:16:13	Warning: 	Retry after error -4 (No data (connection closed)) at link www.crebugs.com/images/layout/mypage_listbg06.png (from www.crebugs.com/css/style.css)
+
+HTTrack Website Copier/3.48-22 mirror complete in 44 seconds : 55 links scanned, 50 files written (2090740 bytes overall) [1076649 bytes received at 24469 bytes/sec], 1322134 bytes transferred using HTTP compression in 17 files, ratio 21%, 3.2 requests per connection
+(1 errors, 4 warnings, 0 messages)
