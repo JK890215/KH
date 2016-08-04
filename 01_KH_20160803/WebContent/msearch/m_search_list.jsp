@@ -9,7 +9,7 @@
 회원 리스트 <br>
 <table width="100%" border="1">
 <tr>
-	<td>이름</td><td>아이디</td><td>권한</td><td>이름</td><td>이메일</td><td>수정</td><td>삭제</td>
+	<td>아이디</td><td>비밀번호</td><td>권한</td><td>이름</td><td>이메일</td><td>수정</td><td>삭제</td>
 </tr>
 
 <%

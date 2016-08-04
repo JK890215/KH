@@ -6,7 +6,11 @@ public class Member {
 	private String m_pw = null;
 	private String m_level = null;
 	private String m_name = null;
+	private String m_email1 = null;
+	private String m_email2 = null;
 	private String m_email = null;
+	
+	
 	
 	public String getM_id() {
 		return m_id;
@@ -39,9 +43,9 @@ public class Member {
 	public String getM_email() {
 		return m_email;
 	}
-	public void setM_email(String m_email) {
+	public void setM_email(String m_email1, String m_email2) {
 		System.out.println(m_email + "<-- m_email setM_email Member.java");
-		this.m_email = m_email;
+		this.m_email = m_email1 + m_email2;
 	}
 
 	

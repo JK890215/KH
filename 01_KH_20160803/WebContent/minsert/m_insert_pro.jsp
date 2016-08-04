@@ -8,6 +8,7 @@
 
 <jsp:useBean id="m" class="kr.or.ksmart.dto.Member"/>
 <jsp:setProperty name="m" property="*"/>
+m.
 <%
 Mdao insertdao = new Mdao();
 insertdao.mInsert(m);

@@ -30,7 +30,12 @@ if(S_LEVEL == null){
 
 </form>
 <br>
+&nbsp;&nbsp;
+<a href="<%= request.getContextPath() %>/user/user_insert_form.jsp"> [&nbsp;회원등록&nbsp;] </a>
+&nbsp;&nbsp;
 <a href="<%= request.getContextPath() %>/goods/goods_list.jsp"> [&nbsp;재능리스트&nbsp;] </a>
+&nbsp;&nbsp;
+
 
 <%}else{ %>
 
