@@ -22,12 +22,14 @@ for(int i = 0; i<get_alm.size() ; i++){
 		<td><%= m.getM_level()%></td>
 		<td><%= m.getM_name()%></td>
 		<td><%= m.getM_email()%></td>
+		
 		<td>
 <a href="<%= request.getContextPath() %>/mupdate/m_update_form.jsp?send_id=<%= m.getM_id()%>">수정클릭</a>			
 		</td>
 		<td>
 <a href="<%= request.getContextPath() %>/mdelete/m_delete_pro.jsp?send_id=<%= m.getM_id()%>">삭제클릭</a>			
 		</td>
+		
 	</tr>
 <%		
 }

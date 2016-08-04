@@ -2,11 +2,19 @@ package kr.or.ksmart.dto;
 
 public class Goods {
 	//전역변수 = 맴버 = 필드 = 맴버필드 = 프로퍼티
-	private String g_name = null;
-	private String g_cate = null;
-	private String g_price = null;
-	private String g_desc = null;
+	private String g_code = null; 
+	private String g_name = null; //재능명
+	private String g_cate = null; //카테고리
+	private String g_price = null; //가격
+	private String g_desc = null; //오름차순 
 	
+	public String getG_code() {
+		return g_code;
+	}
+	public void setG_code(String g_code) {
+		System.out.println(g_code + "<-- g_code setG_code Member.java");
+		this.g_code = g_code;
+	}
 	public String getG_name() {
 		return g_name;
 	}

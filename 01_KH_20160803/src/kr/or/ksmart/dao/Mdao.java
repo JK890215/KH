@@ -13,6 +13,7 @@ import kr.or.ksmart.dto.Member;
 public class Mdao {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
+	PreparedStatement pstmt_select = null;
 	ResultSet rs = null;
 	Member m = null;
 	Goods g = null;
@@ -64,7 +65,7 @@ public class Mdao {
 		conn.close();
 		return re;
 	}
-	//06.1 상품검색 메서드 선언
+	//06_G 상품검색 메서드 선언
 	public ArrayList<Goods> gSearch(String sk,String sv) throws ClassNotFoundException, SQLException{
 		System.out.println("06 mSearch Mdao.java");
 		DriverDB db = new DriverDB();
@@ -72,13 +73,13 @@ public class Mdao {
 		
 		if(sk == null & sv == null){
 			System.out.println("01 sk 널 sv 널인 조건");
-			pstmt = conn.prepareStatement("select * from goods");
+			pstmt = conn.prepareStatement("select * from tb_goods");
 		}else if(sk != null & sv.equals("")){
 			System.out.println("02 sk 값있고 sv 공백 조건");
-			pstmt = conn.prepareStatement("select * from goods");
+			pstmt = conn.prepareStatement("select * from tb_goods");
 		}else if(sk != null & sv != null){
 			System.out.println("03 sk sv 둘다 있는 조건");
-			pstmt = conn.prepareStatement("select * from goods where "+sk+"=?");
+			pstmt = conn.prepareStatement("select * from tb_goods where "+sk+"=?");
 			pstmt.setString(1, sv);
 		}
 		
@@ -86,6 +87,7 @@ public class Mdao {
 		while(rs.next()){
 			g = new Goods();
 			System.out.println(g+"<-- g gAllSelect Mdao.java");
+			g.setG_code(rs.getString("G_code"));
 			g.setG_name(rs.getString("G_name"));
 			g.setG_cate(rs.getString("G_cate"));
 			g.setG_price(rs.getString("G_price"));
@@ -144,6 +146,35 @@ public class Mdao {
 		
 	}
 	
+	//05_G 전체재능조회 메서드 선언
+	public ArrayList<Goods> gAllSelect() throws ClassNotFoundException, SQLException{
+		System.out.println("05_01 gAllSelect Mdao.java");
+		DriverDB db = new DriverDB();
+		conn = db.driverDbcon();
+		pstmt = conn.prepareStatement("select * from tb_goods");
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()){
+			g = new Goods();
+			
+			System.out.println(g+"<-- g gAllSelect Mdao.java");
+			
+			g.setG_code(rs.getString("g_code"));
+			g.setG_name(rs.getString("g_name"));
+			g.setG_cate(rs.getString("g_cate"));
+			g.setG_price(rs.getString("g_price"));
+			g.setG_desc(rs.getString("g_desc"));
+			
+			alg.add(g);
+			System.out.println(alg+"<-- alg mAllSelect Mdao.java");
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
+		
+		return alg;
+	}
+	
 	//05 전체회원조회 메서드 선언
 	public ArrayList<Member> mAllSelect() throws ClassNotFoundException, SQLException{
 		System.out.println("05 mAllSelect Mdao.java");
@@ -169,16 +200,17 @@ public class Mdao {
 		return alm;
 	}
 	
-	//04.1 하나재능정보조회 메서드 선언(수정화면 또는 상세보기 등)
+	//04_G 하나재능정보조회 메서드 선언(수정화면 또는 상세보기 등)
 	public Goods gSelectforUpdate(String gid) throws ClassNotFoundException, SQLException{
 		System.out.println("04.1 gSelectforUpdate Mdao.java");
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
-		pstmt = conn.prepareStatement("select * from tb_goods where G_name=?");
+		pstmt = conn.prepareStatement("select * from tb_goods where g_name=?");
 		pstmt.setString(1, gid);
 		rs = pstmt.executeQuery();	
 		if(rs.next()){
 			g = new Goods();
+			g.setG_code(rs.getString("G_code"));
 			g.setG_name(rs.getString("G_name"));
 			g.setG_cate(rs.getString("G_cate"));
 			g.setG_price(rs.getString("G_price"));
@@ -214,7 +246,18 @@ public class Mdao {
 		return m;
 	}
 	
-	
+	//03_G 삭제처리 메서드 선언
+	public void gDelete(String gid) throws SQLException, ClassNotFoundException{
+		System.out.println("03 gDelete Mdao.java");
+		DriverDB db = new DriverDB();
+		conn = db.driverDbcon();
+		pstmt = conn.prepareStatement(
+				"DELETE FROM tb_goods WHERE g_name=?");
+		pstmt.setString(1, gid);
+		pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
+	}
 	
 	//03 삭제처리 메서드 선언
 	public void mDelete(String mid) throws SQLException, ClassNotFoundException{
@@ -230,7 +273,7 @@ public class Mdao {
 	}
 	
 	
-	//02.1 재능 수정처리 메서드 선언
+	//02_G 재능 수정처리 메서드 선언
 	public void gUpdate(Goods g) throws SQLException, ClassNotFoundException{
 		System.out.println("02 gUpdate Mdao.java");
 		DriverDB db = new DriverDB();
@@ -238,10 +281,12 @@ public class Mdao {
 		pstmt = conn.prepareStatement(
 				"UPDATE tb_Goods SET G_cate=?,G_price=?,G_desc=? WHERE G_name=?");
 		System.out.println(pstmt + "<-- pstmt 1");
+		
 		pstmt.setString(1, g.getG_cate());
 		pstmt.setString(2, g.getG_price());
 		pstmt.setString(3, g.getG_desc());
 		pstmt.setString(4, g.getG_name());
+		pstmt.setString(5, g.getG_code());
 		
 		System.out.println(pstmt + "<-- pstmt 2");
 		
@@ -274,19 +319,44 @@ public class Mdao {
 		conn.close();
 	}
 	
-	//01_02 재능등록 메서드 선언
+	//01_02_G 재능등록 메서드 선언
 	public void gInsert(Goods g) throws SQLException, ClassNotFoundException{
 		System.out.println("01_02 gInsert Mdao.java");
 		
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
+// 재설정 시작 
+		pstmt_select = conn.prepareStatement(
+				"select MAX(substring(g_code,7)) from tb_goods");
+		
+		rs = pstmt_select.executeQuery();
+		
+		String temp = "gcode_";
+		
+		int result = 0;
+		
+		if(rs.next()){
+			result = rs.getInt(1);	//최대값 예를 들어 2
+			System.out.println(result + "<-- result goods_insert_pro.jsp");
+			result = result + 1;	//최대값 2 더하기 1은 3
+		}
+		
+		String g_code = temp + result;	
+		
+		System.out.println(g_code + "<-- g_code goods_insert_pro.jsp");
+	
+/*선생님*/g.setG_code(g_code);//패턴은 똑같다. set하고 get 한다.아니면 그대로 받은값 그대로 연결해준다. 
 		
 		pstmt = conn.prepareStatement(
-				"INSERT INTO tb_goods VALUES (?, ?, ?, ?)");
-		pstmt.setString(1, g.getG_name());	
-		pstmt.setString(2, g.getG_cate());
-		pstmt.setString(3, g.getG_price());
-		pstmt.setString(4, g.getG_desc());
+				"INSERT INTO tb_goods VALUES (?, ?, ?, ?, ?)");
+		
+		//pstmt.setString(1, g_code);
+		
+		pstmt.setString(1, g.getG_code());
+		pstmt.setString(2, g.getG_name());	
+		pstmt.setString(3, g.getG_cate());
+		pstmt.setString(4, g.getG_price());
+		pstmt.setString(5, g.getG_desc());
 		
 		System.out.println(pstmt + "<-- pstmt gInsert Mdao.java");
 		
@@ -294,7 +364,7 @@ public class Mdao {
 		pstmt.close();
 		conn.close();
 	}
-	
+// 재설정 종료
 	
 	//01_02 회원등록 메서드 선언
 	public void mInsert(Member m) throws SQLException, ClassNotFoundException{
@@ -316,26 +386,45 @@ public class Mdao {
 		conn.close();
 	}
 	
-	//01_01 회원등록(드라이버로딩과 DB연결 후) 메서드 선언
+	//01_01_G 회원등록(드라이버로딩과 DB연결 후) 메서드 선언
 	public void gInsert(Goods g, Connection conn) throws SQLException{
 		//3단계 쿼리실행준비부터 시작
 		System.out.println("01_01 gInsert Mdao.java");
+		
+		pstmt_select = conn.prepareStatement(
+				"select MAX(substring(g_code,7)) from tb_goods");
+		
+		rs = pstmt_select.executeQuery();
+		
+		String temp = "gcode_";
+		
+		int result = 0;
+		
+		if(rs.next()){
+			result = rs.getInt(1);	//최대값 예를 들어 2
+			System.out.println(result + "<-- result goods_insert_pro.jsp");
+			result = result + 1;	//최대값 2 더하기 1은 3
+		}
+		
+		String g_code = temp + result;	
+		
+		System.out.println(g_code + "<-- g_code goods_insert_pro.jsp");
+		
 		pstmt = conn.prepareStatement(
-				"INSERT INTO tb_goods VALUES (?, ?, ?, ?)");
-		pstmt.setString(1, g.getG_name());	
-		pstmt.setString(2, g.getG_cate());
-		pstmt.setString(3, g.getG_price());
-		pstmt.setString(4, g.getG_desc());
+				"INSERT INTO tb_goods VALUES (?, ?, ?, ?, ?)");
+		
+		pstmt.setString(1, g.getG_code());	
+		pstmt.setString(2, g.getG_name());	
+		pstmt.setString(3, g.getG_cate());
+		pstmt.setString(4, g.getG_price());
+		pstmt.setString(5, g.getG_desc());
 		
 		System.out.println(pstmt + "<-- pstmt gInsert Mdao.java");
 		
 		pstmt.executeUpdate();
 		pstmt.close();
 		conn.close();
-		
 	}
-
-	
 	//01_01 회원등록(드라이버로딩과 DB연결 후) 메서드 선언
 	public void mInsert(Member m, Connection conn) throws SQLException{
 		//3단계 쿼리실행준비부터 시작
@@ -352,8 +441,4 @@ public class Mdao {
 		pstmt.close();
 		conn.close();
 	}
-	
-	
-	
-	
 }

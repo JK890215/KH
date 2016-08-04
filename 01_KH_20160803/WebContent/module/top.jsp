@@ -19,21 +19,24 @@
 <%
 if(S_LEVEL == null){
 %>
-<a href="<%= request.getContextPath() %>/goods/goods_list.jsp"> 재능리스트 </a>
-<br><br>
-<form action="<%= request.getContextPath() %>/login/login_pro.jsp" method="post">
-	아이디 : <input type="text" name="id">
-	비번 : <input type="password" name="pw">
 
-	<input type="submit" value="로그인">
+<form action="<%= request.getContextPath() %>/login/login_pro.jsp" method="post">
+
+	<div style="text-align:right">
+	아이디 : <input type="text" name="id"> 
+	비번 : <input type="password" name="pw"> 
+	<input type="submit" value="로그인"> 
+	</div>
+
 </form>
+<br>
+<a href="<%= request.getContextPath() %>/goods/goods_list.jsp"> [&nbsp;재능리스트&nbsp;] </a>
 
 <%}else{ %>
 
-
 <div style="text-align:right"> <%= S_NAME %> 님 <%= S_LEVEL %> 권한 로그인 
 <a href="<%= request.getContextPath() %>/login/logout.jsp">로그아웃</a></div>
-<br><br>
+<br>
 
 <%	if(S_LEVEL.equals("구매자")){ 		%>
 &nbsp;&nbsp;

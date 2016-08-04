@@ -29,7 +29,7 @@ th, td {
 		 <div id="rightcolumn">
 
 <form action="<%= request.getContextPath() %>/goods/goods_insert_pro.jsp" method="post">
-<table border="1">
+<table border="0">
 <!-- <tr>
 	<td>상품코드</td>
 	<td><input type="text" name="g_code" size="20"></td>

@@ -34,54 +34,56 @@ String send_id = request.getParameter("send_id");
 System.out.println(send_id + "<-- send_id m_update_form.jsp");
 Mdao dao = new Mdao();
 Goods g = dao.gSelectforUpdate(send_id);
-//G_name G_cate G_price G_desc
-String dbname = null;
-String dbcate = null;
-String dbprice = null;
-String dbdesc = null;
 
-dbname = g.getG_name();
-dbcate = g.getG_cate();
-dbprice = g.getG_price();
-dbdesc = g.getG_desc();
-//G_name G_cate G_price G_desc
+//String dbid = null;
+String dbpw = null;
+String dblevel = null;
+String dbname = null;
+String dbemail = null;
+//dbid = g.getG_code();
+dbpw = g.getG_name();
+dblevel = g.getG_cate();
+dbname = g.getG_price();
+dbemail = g.getG_desc();
+
 %>
 <form action="<%= request.getContextPath() %>/gupdate/g_update_pro.jsp" method="post">
 <table border="1">
-<tr>
-	<td></td>
-	<%-- <td>
- 
-<input type="hidden" name="G_name" size="20" value="<%= dbname %>">	
-		<%= dbname %> 
+<%-- <tr>
+	<td>아이디</td>
+	<td>
+<input type="hidden" name="m_id" size="20" value="<%= dbid %>">	
+		<%= dbid %>
 		
 
-<input type="text" name="G_name" size="20" value="<%= dbname %>" readonly> 
+<input type="text" name="m_id" size="20" value="<%= dbid %>" readonly> 
 
 	
-	</td> --%>
-<tr> 
+	</td>
+<tr> --%> 
 <tr>
 	<td>재능명</td>
-	<td><input type="text" name="G_name" size="20" value="<%= dbname %>"></td>
+	<td><input type="text" name="g_name" size="20" value="<%= dbpw %>"></td>
 <tr>
 <tr>
 	<td>카테고리</td>
-	<td><input type="text" name="g_cate" size="20" value="<%= dbcate %>"></td>
+	<td><input type="text" name="g_cate" size="20" value="<%= dblevel %>"></td>
 <tr>
 <tr>
 	<td>가격</td>
-	<td><input type="text" name="G_price" size="20" value="<%= dbprice %>"></td>
+	<td><input type="text" name="g_price" size="20" value="<%= dbname %>"></td>
 <tr>
 <tr>
 	<td>상세설명</td>
-	<td><input type="text" name="G_desc" size="20" value="<%= dbdesc %>"></td>
+	<td><input type="text" name="g_desc" size="20" value="<%= dbemail %>"></td>
 <tr>
 <tr>
-	<td colspan="4"><input type="submit" value="재능수정버튼"></td>
+	<td colspan="4"><input type="submit" value="회원수정버튼"></td>
 </tr>
 </table>
 </form>
+
+
 
 <%@ include file="/module/hadan.jsp" %>
 
